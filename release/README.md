@@ -1,22 +1,24 @@
 # @edzava/gitlab-mcp (release)
 
-Paquete npm **standalone** para `npx --package git+...@TAG?subdir=release`.
+Paquete npm **standalone** para `npx --package git+https://...@TAG?subdir=release`.
 
 ## Cliente MCP (`mcp.json`)
 
-Repositorio **privado**: usar `git+ssh` (clave SSH en el agente). Sustituye el tag por la version publicada.
+Mismo patron que los MCP Python del equipo (`uvx` + `git+https://`). Sustituye el tag por la version publicada.
 
 ```json
 "npx": {
   "args": [
     "-y",
     "--package",
-    "git+ssh://git@github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.3?subdir=release",
+    "git+https://github.com/EdZava/zv-mcp-gitlab.git@9.1.1-release.3?subdir=release",
     "gitlab-mcp",
     "stdio"
   ]
 }
 ```
+
+Si el fork en GitHub es **privado**, el entorno donde arranca Cursor debe poder clonar por HTTPS (credenciales GitHub / helper de git).
 
 Alternativa con GitHub Packages (requiere `~/.npmrc` con token de lectura de paquetes):
 
