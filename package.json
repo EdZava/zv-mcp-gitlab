@@ -20,7 +20,7 @@
     "build": "nx run-many -t build",
     "test": "nx run-many -t test",
     "lint": "nx run-many -t lint",
-    "sync-release": "node scripts/sync-npm-release.cjs"
+    "sync-release": "uvx --from git+ssh://git@github.com/EdZava/zv-mcp-release-toolkit.git@v0.2.0 mcp-release-toolkit sync --config .mcp-release.toml --root ."
   },
   "devDependencies": {
     "nx": "^23.0.0"

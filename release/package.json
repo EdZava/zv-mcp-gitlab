@@ -1,7 +1,7 @@
 {
-  "name": "@edzava/gitlab-mcp",
-  "version": "9.1.1-edzava.2",
-  "description": "GitLab MCP server (fork EdZava, instalable desde GitHub)",
+  "name": "release-gitlab-mcp",
+  "version": "9.1.1-release.2",
+  "description": "MCP server (empaquetado release/, instalable desde GitHub)",
   "license": "Apache-2.0",
   "bin": {
     "gitlab-mcp": "./dist/src/main.js"
