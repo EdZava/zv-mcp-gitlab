@@ -1,11 +1,17 @@
 # release-gitlab-mcp (release)
 
-Paquete npm **standalone** para instalar el MCP de GitLab desde este fork sin compilar el monorepo.
+Paquete npm **standalone** para instalar el MCP de GitLab desde este repositorio sin compilar el monorepo.
 
-## Uso en Cursor (`mcp.json`)
+## Cliente MCP (`mcp.json`)
 
 ```json
-"gitlab": {
+"git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.2?subdir=release"
+```
+
+Ejemplo con `npx`:
+
+```json
+{
   "command": "npx",
   "args": [
     "-y",
@@ -13,12 +19,11 @@ Paquete npm **standalone** para instalar el MCP de GitLab desde este fork sin co
     "git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.2?subdir=release",
     "gitlab-mcp",
     "stdio"
-  ],
-  "envFile": "${workspaceFolder}/.cursor/mcp.env"
+  ]
 }
 ```
 
-Sustituye el tag por la version publicada en este fork.
+Sustituye el tag por la version publicada en este repositorio.
 
 ## Regenerar `release/`
 
