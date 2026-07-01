@@ -1,6 +1,6 @@
 {
-  "name": "release-gitlab-mcp",
-  "version": "9.1.1-release.2",
+  "name": "@edzava/gitlab-mcp",
+  "version": "9.1.1-release.3",
   "description": "MCP server (empaquetado release/, instalable desde GitHub)",
   "license": "Apache-2.0",
   "bin": {
@@ -34,5 +34,8 @@
     "type": "git",
     "url": "https://github.com/EdZava/zv-mcp-gitlab.git",
     "directory": "release"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

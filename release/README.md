@@ -1,39 +1,33 @@
-# release-gitlab-mcp (release)
+# @edzava/gitlab-mcp (release)
 
-Paquete npm **standalone** para instalar el MCP de GitLab desde este repositorio sin compilar el monorepo.
+Paquete npm **standalone** para `npx --package git+...@TAG?subdir=release`.
 
 ## Cliente MCP (`mcp.json`)
 
-```json
-"git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.2?subdir=release"
-```
-
-Ejemplo con `npx`:
+Repositorio **privado**: usar `git+ssh` (clave SSH en el agente). Sustituye el tag por la version publicada.
 
 ```json
-{
-  "command": "npx",
+"npx": {
   "args": [
     "-y",
     "--package",
-    "git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.2?subdir=release",
+    "git+ssh://git@github.com/EdZava/zv-mcp-gitlab.git#9.1.1-release.3?subdir=release",
     "gitlab-mcp",
     "stdio"
   ]
 }
 ```
 
-Sustituye el tag por la version publicada en este repositorio.
+Alternativa con GitHub Packages (requiere `~/.npmrc` con token de lectura de paquetes):
+
+```json
+"--package",
+"@edzava/gitlab-mcp@9.1.1-release.3"
+```
 
 ## Regenerar `release/`
 
-```bash
-yarn workspace @structured-world/gitlab-mcp run build
-yarn sync-release
-git add release/ .mcp-release.toml
-git tag 9.1.1-release.3   # incrementar release_suffix en .mcp-release.toml
-git push origin main --tags
-```
+Compilar el paquete fuente, luego `yarn sync-release` (o `mcp-release-toolkit sync`).
 
 Configuracion: `.mcp-release.toml` + [zv-mcp-release-toolkit](https://github.com/EdZava/zv-mcp-release-toolkit).
 

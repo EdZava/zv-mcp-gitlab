@@ -1,13 +1,13 @@
 type = "npm"
 
 [release]
-release_suffix = "release.2"
+release_suffix = "release.3"
 github_repo = "EdZava/zv-mcp-gitlab"
 
 [npm]
 source_package_json = "packages/gitlab-mcp/package.json"
 source_dist = "packages/gitlab-mcp/dist"
-release_name = "release-gitlab-mcp"
+release_name = "@edzava/gitlab-mcp"
 
 [npm.bin]
 gitlab-mcp = "./dist/src/main.js"
