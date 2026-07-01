@@ -17,6 +17,7 @@ coverage/
 .yarn/*
 !.yarn/releases/
 package-lock.json
+!release/package-lock.json
 
 .dist/
 

@@ -10,7 +10,7 @@ Paquete npm **standalone** para instalar el MCP de GitLab desde este fork sin co
   "args": [
     "-y",
     "--package",
-    "git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-edzava.1?subdir=release",
+    "git+https://github.com/EdZava/zv-mcp-gitlab.git#9.1.1-edzava.2?subdir=release",
     "gitlab-mcp",
     "stdio"
   ],
@@ -23,16 +23,21 @@ Paquete npm **standalone** para instalar el MCP de GitLab desde este fork sin co
 }
 ```
 
-Sustituye el tag `#9.1.1-edzava.1` por la versión que quieras fijar.
+Sustituye el tag por la version publicada en este fork.
+
+## Seguridad
+
+- `package-lock.json`: dependencias npm **fijadas** (reproducibles).
+- `.npmrc` con `ignore-scripts=true`: evita scripts postinstall al instalar.
+- Publicar solo tags revisados; no reescribir tags ya usados en produccion.
 
 ## Regenerar `release/`
-
-Tras cambios en `packages/gitlab-mcp`:
 
 ```bash
 yarn workspace @structured-world/gitlab-mcp run build
 yarn sync-release
-git add release/ && git commit -m "release: sync @edzava/gitlab-mcp"
-git tag 9.1.1-edzava.2   # incrementar según corresponda
+git add release/ scripts/sync-npm-release.cjs
+git commit -m "release: sync @edzava/gitlab-mcp"
+git tag 9.1.1-edzava.3   # incrementar sufijo en scripts/sync-npm-release.cjs si aplica
 git push origin main --tags
 ```
