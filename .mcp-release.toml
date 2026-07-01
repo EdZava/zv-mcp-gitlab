@@ -1,7 +1,7 @@
 type = "npm"
 
 [release]
-release_suffix = "release.3"
+release_suffix = "release.4"
 github_repo = "EdZava/zv-mcp-gitlab"
 
 [npm]

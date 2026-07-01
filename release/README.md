@@ -11,7 +11,7 @@ Mismo patron que los MCP Python del equipo (`uvx` + `git+https://`). Sustituye e
   "args": [
     "-y",
     "--package",
-    "git+https://github.com/EdZava/zv-mcp-gitlab.git@9.1.1-release.3?subdir=release",
+    "git+https://github.com/EdZava/zv-mcp-gitlab.git@9.1.1-release.4?subdir=release",
     "gitlab-mcp",
     "stdio"
   ]
@@ -24,7 +24,7 @@ Alternativa con GitHub Packages (requiere `~/.npmrc` con token de lectura de paq
 
 ```json
 "--package",
-"@edzava/gitlab-mcp@9.1.1-release.3"
+"@edzava/gitlab-mcp@9.1.1-release.4"
 ```
 
 ## Regenerar `release/`

@@ -1,6 +1,6 @@
 {
   "name": "@edzava/gitlab-mcp",
-  "version": "9.1.1-release.3",
+  "version": "9.1.1-release.4",
   "description": "MCP server (empaquetado release/, instalable desde GitHub)",
   "license": "Apache-2.0",
   "bin": {
