@@ -1,0 +1,10 @@
+import { InstallableClient, ClientDetectionResult } from './types';
+export { expandPath } from '../utils/path-utils.js';
+export declare function getConfigPath(client: InstallableClient): string | undefined;
+export declare function commandExists(command: string): boolean;
+export declare function isValidBundleId(bundleId: string): boolean;
+export declare function isAlreadyConfigured(configPath: string): boolean;
+export declare function detectClient(client: InstallableClient): ClientDetectionResult;
+export declare function detectAllClients(): ClientDetectionResult[];
+export declare function getDetectedClients(): ClientDetectionResult[];
+export declare function getConfiguredClients(): ClientDetectionResult[];

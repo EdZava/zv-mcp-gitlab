@@ -1,0 +1,12 @@
+import { InstallableClient, InstallResult } from './types';
+import { McpServerConfig } from '../init/types';
+export declare function installClaudeDesktop(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installClaudeCode(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installCursor(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installVSCodeCopilot(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installWindsurf(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installCline(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installRooCode(serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installToClient(client: InstallableClient, serverConfig: McpServerConfig, force?: boolean): InstallResult;
+export declare function installToClients(clients: InstallableClient[], serverConfig: McpServerConfig, force?: boolean): InstallResult[];
+export declare function generateConfigPreview(client: InstallableClient, serverConfig: McpServerConfig): string;

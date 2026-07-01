@@ -1,0 +1,49 @@
+# Team Lead preset - planning and oversight
+#
+# Focused on team management:
+# - Planning with milestones and work items
+# - Code review via merge requests
+# - Pipeline monitoring
+# - Wiki and documentation
+#
+# No access to sensitive variables or webhooks.
+#
+# NOTE: This is a PRESET - host/auth come from environment variables.
+
+description: "Team Lead - planning, milestones, team oversight, code review"
+
+read_only: false
+
+features:
+  wiki: true
+  milestones: true
+  pipelines: true
+  labels: true
+  mrs: true
+  files: true
+  variables: false
+  workitems: true
+  webhooks: false
+  snippets: true
+  integrations: false
+  # New entities - full team management
+  releases: true    # Release planning
+  refs: true        # Branch management
+  members: true     # Team access management
+  search: true      # Code search
+  # GitLab 18/19 domains - oversight
+  environments: true     # Deployment status
+  runners: false
+  registry: false
+  access_tokens: false
+  audit_events: true     # Who did what (Premium+, tier-gated)
+  vulnerabilities: true  # Security posture (Ultimate, tier-gated)
+
+# Block sensitive operations
+denied_actions:
+  - "manage_variable:create"
+  - "manage_variable:update"
+  - "manage_variable:delete"
+  - "manage_webhook:create"
+  - "manage_webhook:update"
+  - "manage_webhook:delete"

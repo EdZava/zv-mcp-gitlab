@@ -19,7 +19,8 @@
   "scripts": {
     "build": "nx run-many -t build",
     "test": "nx run-many -t test",
-    "lint": "nx run-many -t lint"
+    "lint": "nx run-many -t lint",
+    "sync-release": "node scripts/sync-npm-release.cjs"
   },
   "devDependencies": {
     "nx": "^23.0.0"

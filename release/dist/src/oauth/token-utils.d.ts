@@ -1,0 +1,14 @@
+import { MCPTokenPayload } from './types';
+export declare function createJWT(payload: Record<string, unknown>, secret: string, expiresIn: number): string;
+export declare function verifyJWT(token: string, secret: string): Record<string, unknown> | null;
+export declare function verifyMCPToken(token: string, secret: string): MCPTokenPayload | null;
+export declare function generateCodeVerifier(): string;
+export declare function generateCodeChallenge(verifier: string): string;
+export declare function verifyCodeChallenge(verifier: string, challenge: string, method: string): boolean;
+export declare function generateRandomString(length?: number): string;
+export declare function generateUUID(): string;
+export declare function generateAuthorizationCode(): string;
+export declare function generateSessionId(): string;
+export declare function generateRefreshToken(): string;
+export declare function isTokenExpiringSoon(expiryMs: number, bufferMs?: number): boolean;
+export declare function calculateTokenExpiry(expiresIn: number): number;

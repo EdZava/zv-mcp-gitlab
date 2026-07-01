@@ -1,0 +1,11 @@
+import { ListPresetsInput, ListProfilesInput, ManageContextInput, ResetContextInput, SetScopeInput, ShowContextInput, SwitchPresetInput, SwitchProfileInput, WhoamiInput } from './schema';
+import { PresetInfo, ProfileInfo, ResetResult, SessionContext, SetScopeResult, SwitchResult, WhoamiResult } from './types';
+export declare function handleShowContext(_input: ShowContextInput): Promise<SessionContext>;
+export declare function handleListPresets(_input: ListPresetsInput): Promise<PresetInfo[]>;
+export declare function handleListProfiles(_input: ListProfilesInput): Promise<ProfileInfo[]>;
+export declare function handleSwitchPreset(input: SwitchPresetInput): Promise<SwitchResult>;
+export declare function handleSwitchProfile(input: SwitchProfileInput): Promise<SwitchResult>;
+export declare function handleSetScope(input: SetScopeInput): Promise<SetScopeResult>;
+export declare function handleResetContext(_input: ResetContextInput): Promise<ResetResult>;
+export declare function handleWhoami(_input: WhoamiInput): Promise<WhoamiResult>;
+export declare function handleManageContext(input: ManageContextInput): Promise<SessionContext | PresetInfo[] | ProfileInfo[] | SwitchResult | SetScopeResult | ResetResult | WhoamiResult>;

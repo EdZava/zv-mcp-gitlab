@@ -1,0 +1,32 @@
+import { ScopeEnforcer } from '../../profiles/scope-enforcer';
+import { Preset, ProfileInfo } from '../../profiles/types';
+import { PresetInfo, ResetResult, SessionContext, SetScopeResult, SwitchResult } from './types';
+export declare class ContextManager {
+    private static instance;
+    private profileLoader;
+    private currentPreset;
+    private currentPresetName;
+    private currentScope;
+    private currentScopeEnforcer;
+    private currentProfileName;
+    private initialContext;
+    private constructor();
+    static getInstance(): ContextManager;
+    static resetInstance(): void;
+    private captureInitialContext;
+    private scopeConfigToRuntimeScope;
+    getContext(): SessionContext;
+    listPresets(): Promise<PresetInfo[]>;
+    listProfiles(): Promise<ProfileInfo[]>;
+    switchPreset(presetName: string): Promise<SwitchResult>;
+    getCurrentProfileUrl(): Promise<string | null>;
+    switchProfile(profileName: string): Promise<SwitchResult>;
+    setScope(namespace: string, includeSubgroups?: boolean): Promise<SetScopeResult>;
+    reset(): ResetResult;
+    getScopeEnforcer(): ScopeEnforcer | null;
+    hasScope(): boolean;
+    getCurrentPreset(): Preset | null;
+    getCurrentPresetName(): string | null;
+    switchInstance(instanceUrl: string): Promise<SwitchResult>;
+}
+export declare function getContextManager(): ContextManager;

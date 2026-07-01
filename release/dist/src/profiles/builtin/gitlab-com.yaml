@@ -1,0 +1,47 @@
+# gitlab.com preset - rate-limit friendly
+#
+# Optimized for gitlab.com public instance:
+# - Standard development features enabled
+# - Rate-limit friendly restrictions
+# - Safe defaults for public projects
+#
+# Features that typically require elevated access are disabled.
+#
+# NOTE: This is a PRESET - host/auth come from environment variables.
+
+description: "Optimized for gitlab.com - respects rate limits, safe defaults"
+
+read_only: false
+
+features:
+  wiki: true
+  milestones: true
+  pipelines: true
+  labels: true
+  mrs: true
+  files: true
+  variables: false     # Often restricted on public projects
+  workitems: true
+  webhooks: false      # Requires maintainer+ access
+  snippets: true
+  integrations: false  # Requires admin access
+  # New entities - standard access for gitlab.com
+  releases: true       # Release management
+  refs: true           # Branch/tag browsing
+  members: true        # Team info browsing
+  search: true         # Code search
+  # GitLab 18/19 domains - safe Free defaults for gitlab.com
+  environments: true     # Deployment visibility
+  runners: false         # Shared runners are not user-managed on .com
+  registry: true         # Project container registry
+  access_tokens: false   # Sensitive
+  audit_events: false    # Premium+, off by default
+  vulnerabilities: false  # Ultimate, off by default
+
+# Rate-limit friendly restrictions
+denied_actions:
+  # Pagination-heavy operations
+  - "browse_commits:list"
+  - "browse_pipelines:list"
+  # Operations that can trigger many API calls
+  - "manage_pipeline:retry"

@@ -1,0 +1,10 @@
+import { OAuthConfig } from './config';
+import { GitLabDeviceResponse, GitLabTokenResponse, GitLabUserInfo } from './types';
+export declare function initiateDeviceFlow(config: OAuthConfig): Promise<GitLabDeviceResponse>;
+export declare function pollDeviceFlowOnce(deviceCode: string, config: OAuthConfig): Promise<GitLabTokenResponse | null>;
+export declare function pollForToken(deviceCode: string, config: OAuthConfig, onPending?: () => void): Promise<GitLabTokenResponse>;
+export declare function refreshGitLabToken(refreshToken: string, config: OAuthConfig): Promise<GitLabTokenResponse>;
+export declare function getGitLabUser(accessToken: string): Promise<GitLabUserInfo>;
+export declare function validateGitLabToken(accessToken: string): Promise<boolean>;
+export declare function exchangeGitLabAuthCode(code: string, redirectUri: string, config: OAuthConfig): Promise<GitLabTokenResponse>;
+export declare function buildGitLabAuthUrl(config: OAuthConfig, redirectUri: string, state: string): string;

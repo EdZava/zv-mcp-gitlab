@@ -1,0 +1,10 @@
+import { TokenContext } from './types';
+export declare function runWithTokenContext<T>(context: TokenContext, fn: () => T | Promise<T>): T | Promise<T>;
+export declare function getTokenContext(): TokenContext | undefined;
+export declare function getGitLabTokenFromContext(): string;
+export declare function getGitLabUserIdFromContext(): number | undefined;
+export declare function getGitLabUsernameFromContext(): string | undefined;
+export declare function getSessionIdFromContext(): string | undefined;
+export declare function getGitLabApiUrlFromContext(): string | undefined;
+export declare function getInstanceLabelFromContext(): string | undefined;
+export declare function isInOAuthContext(): boolean;
