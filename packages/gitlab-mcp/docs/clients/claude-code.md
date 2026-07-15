@@ -90,7 +90,7 @@ claude
 ## Troubleshooting
 
 - **Server not loading**: Restart Claude Code session after config changes
-- **"Command not found"**: Ensure `npx` is available (Node.js >= 24)
+- **"Command not found"**: Ensure `npx` is available (Node.js >= 22)
 - **Permission issues**: Check file permissions on `~/.claude.json`
 
 ## See Also

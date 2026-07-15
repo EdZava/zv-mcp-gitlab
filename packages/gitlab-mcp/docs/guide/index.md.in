@@ -25,7 +25,7 @@ Advanced GitLab MCP server providing AI agents with comprehensive access to the 
 
 ## Requirements
 
-- **Node.js** >= 24.0.0 (required for native fetch with Undici dispatcher pattern)
+- **Node.js** >= 22.0.0 (compatible con Node embebido de Cursor y LTS 22+)
 - **GitLab** — Compatible with GitLab.com and self-hosted instances
 
 ## Architecture

@@ -11,7 +11,7 @@ Mismo patron que los MCP Python del equipo (`uvx` + `git+https://`). Sustituye e
   "args": [
     "-y",
     "--package",
-    "git+https://github.com/EdZava/zv-mcp-gitlab.git@9.1.1-release.4?subdir=release",
+    "git+https://github.com/EdZava/zv-mcp-gitlab.git@9.1.1-release.5?subdir=release",
     "gitlab-mcp",
     "stdio"
   ]
@@ -24,12 +24,12 @@ Alternativa con GitHub Packages (requiere `~/.npmrc` con token de lectura de paq
 
 ```json
 "--package",
-"@edzava/gitlab-mcp@9.1.1-release.4"
+"@edzava/gitlab-mcp@9.1.1-release.5"
 ```
 
 ## Regenerar `release/`
 
-Compilar el paquete fuente, luego `yarn sync-release` (o `mcp-release-toolkit sync`).
+Compilar el paquete fuente, luego `mcp-release-toolkit publish --config .mcp-release.toml`.
 
 Configuracion: `.mcp-release.toml` + [zv-mcp-release-toolkit](https://github.com/EdZava/zv-mcp-release-toolkit).
 

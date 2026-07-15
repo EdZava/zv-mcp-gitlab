@@ -1,6 +1,6 @@
 {
   "name": "@edzava/gitlab-mcp",
-  "version": "9.1.1-release.4",
+  "version": "9.1.1-release.5",
   "description": "MCP server (empaquetado release/, instalable desde GitHub)",
   "license": "Apache-2.0",
   "bin": {
@@ -12,7 +12,7 @@
     ".npmrc"
   ],
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "dependencies": {
     "@clack/prompts": "1.6.0",

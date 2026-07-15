@@ -32,7 +32,7 @@ This is a monorepo with two npm packages:
 }
 ```
 
-**Requirements:** Node.js >= 24
+**Requirements:** Node.js >= 22
 
 ## Highlights
 

@@ -111,7 +111,7 @@ Connect to a running GitLab MCP HTTP server:
 ## Troubleshooting
 
 - **Server not appearing**: Restart Claude Desktop after config changes
-- **"Command not found"**: Ensure Node.js >= 24 is installed and `npx` is in PATH
+- **"Command not found"**: Ensure Node.js >= 22 is installed and `npx` is in PATH
 - **Connection errors**: Check token scopes (`api`, `read_user`)
 - **Config file not found**: Create the file and parent directories if they don't exist
 

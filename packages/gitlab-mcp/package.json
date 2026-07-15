@@ -11,7 +11,7 @@
     "author": "Dmitry Prudnikov",
     "license": "Apache-2.0",
     "runtime": "node",
-    "minNodeVersion": "24.0.0",
+    "minNodeVersion": "22.0.0",
     "transports": [
       "stdio",
       "sse",
@@ -525,7 +525,7 @@
     "url": "https://github.com/structured-world/gitlab-mcp/issues"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && yarn build:copy-assets",

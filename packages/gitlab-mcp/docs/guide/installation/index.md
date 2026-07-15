@@ -45,7 +45,7 @@ package persists OAuth sessions in PostgreSQL — enable it with
 
 ## Prerequisites
 
-- **Node.js >= 24.0.0** (for npm/npx methods)
+- **Node.js >= 22.0.0** (for npm/npx methods)
 - **[GitLab Personal Access Token](/guide/authentication#pat)** with `api` and `read_user` scopes
 - One or more [supported MCP clients](/clients/)
 

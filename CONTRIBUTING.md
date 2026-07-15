@@ -6,7 +6,7 @@ Thank you for your interest in contributing to GitLab MCP Server!
 
 ### Prerequisites
 
-- Node.js >= 24.0.0
+- Node.js >= 22.0.0
 - Yarn 4+
 - A GitLab instance with API access (for integration tests)
 

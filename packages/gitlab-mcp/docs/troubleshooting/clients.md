@@ -112,14 +112,14 @@ This means an existing `gitlab` entry was found in the config.
 **Cause**: Node.js is not installed or not in PATH.
 
 **Fix**:
-1. Install Node.js >= 24:
+1. Install Node.js >= 22:
    ```bash
    # macOS (Homebrew)
-   brew install node
+   brew install node@22
 
    # Or use nvm
-   nvm install 24
-   nvm use 24
+   nvm install 22
+   nvm use 22
    ```
 2. Verify: `node --version` and `npx --version`
 
